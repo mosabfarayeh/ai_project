@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     labelText: 'Email',
                     prefixIcon: Icon(
                       Icons.email,
-                      color: Colors.deepOrange,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(),
                   ),
@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     labelText: 'Password',
                     prefixIcon: Icon(
                       Icons.lock,
-                      color: Colors.deepOrange,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(),
                   ),
@@ -94,10 +94,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (_formKey.currentState?.validate() ?? false) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            backgroundColor: Colors.deepOrange,
+                            backgroundColor: Colors.black,
                             content: Text(
                               'Login Successfuly and Navigate to Home Page',
-                              style: TextStyle(fontSize: 18),
+                              style:
+                                  TextStyle(fontSize: 18, color: Colors.white),
                             ),
                           ),
                         );
@@ -116,7 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     // button style -> backgroundColor deep orange and padding vertical 15 horizontal 30 radius 20
                     style: ElevatedButton.styleFrom(
                       //primary: Colors.white,
-                      backgroundColor: Colors.deepOrange,
+                      backgroundColor: Colors.black,
                       padding: const EdgeInsets.symmetric(
                         vertical: 15,
                         horizontal: 30,
@@ -149,7 +150,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     // button style -> backgroundColor deep orange and padding vertical 15 horizontal 30 radius 20
                     style: ElevatedButton.styleFrom(
                       //primary: Colors.white,
-                      backgroundColor: Colors.deepOrange,
+                      backgroundColor: Colors.black,
                       padding: const EdgeInsets.symmetric(
                         vertical: 15,
                         horizontal: 30,

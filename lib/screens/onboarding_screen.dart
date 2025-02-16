@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'login_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -16,24 +15,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final List<Map<String, dynamic>> onboardingPages = [
     {
       "color": Colors.deepOrange,
-      "title": "Welcome to SpeedTest",
-      "description": "Test your internet speed with accuracy.",
-      "image":
-          "https://broadband.yourcoop.coop/Assets/Images/NoResize/default/test-broadbandspeed-systemtools.png",
+      "title": "Welcome to Handwriting Analysis App",
+      "description": "Use AI to easily understand and analyze handwriting.",
+      "image": "assets/images/onboarding1.png", // Local image
     },
     {
       "color": Colors.green,
-      "title": "Real-Time Results",
-      "description": "Get real-time speed test results and insights.",
-      "image":
-          "https://broadband.yourcoop.coop/Assets/Images/NoResize/default/test-broadbandspeed-speedtest.png",
+      "title": "Instant Results",
+      "description": "Get real-time handwriting analysis results.",
+      "image": "assets/images/onboarding2.png", // Local image
     },
     {
       "color": Colors.blue,
       "title": "Start Your Journey",
-      "description": "Let's get started and test your speed now!",
-      "image":
-          "https://broadband.yourcoop.coop/Assets/Images/NoResize/default/test-broadbandspeed-timeofday.png"
+      "description": "Start analyzing handwriting with ease!",
+      "image": "assets/images/onboarding3.png" // Local image
     },
   ];
 
@@ -46,7 +42,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
-
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -59,7 +54,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               onPageChanged: _onPageChanged,
               itemBuilder: (context, index) {
                 return Container(
-                  // color: onboardingPages[index]['color'],
                   width: double.infinity,
                   height: double.infinity,
                   child: Column(
@@ -68,8 +62,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Container(
                         height: height * 0.4,
                         width: width,
-                        child: Image.network(
-                          onboardingPages[index]['image'],
+                        child: Image.asset(
+                          onboardingPages[index]
+                              ['image'], // Use Image.asset for local images
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -97,7 +92,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               },
             ),
           ),
-          // Page Indicator (Dots)
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -118,7 +112,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ),
           const SizedBox(height: 20),
-          // Navigation Buttons
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: SizedBox(
@@ -126,7 +119,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: ElevatedButton(
                 onPressed: () {
                   if (_currentPage == onboardingPages.length - 1) {
-                    // Navigate to Login Screen on last step
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(

@@ -46,7 +46,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     labelText: 'Name',
                     prefixIcon: Icon(
                       Icons.person,
-                      color: Colors.deepOrange,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(),
                   ),
@@ -60,7 +60,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     labelText: 'Email',
                     prefixIcon: Icon(
                       Icons.email,
-                      color: Colors.deepOrange,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(),
                   ),
@@ -75,7 +75,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     labelText: 'Password',
                     prefixIcon: Icon(
                       Icons.lock,
-                      color: Colors.deepOrange,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(),
                   ),
@@ -90,7 +90,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     labelText: 'Confirm Password',
                     prefixIcon: Icon(
                       Icons.lock,
-                      color: Colors.deepOrange,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(),
                   ),
@@ -100,7 +100,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: Colors.black,
                     padding: const EdgeInsets.symmetric(
                       vertical: 15,
                       horizontal: 30,
